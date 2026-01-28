@@ -21,6 +21,7 @@ eval "$(docopts -A ARGS -V "$VERSION" -h "$usage" : "$@")"
 search_dir="$PWD"
 pattern="${ARGS['<pattern>']}"
 echo Searching "$search_dir" for "$pattern"
+echo
 
 rg \
   \
