@@ -3,11 +3,12 @@
 # Ripgrep Go
 #
 # Usage:
-#   rgg <pattern>
+#   rgg <pattern> [--context=<lc>]
 #   rgg -h | --help
 #   rgg --version
 #
 # Options:
+#   -c --context=<lc>  Lines of context before and after match [default: 0].
 #   -h --help     Show this help message.
 #   -v --version  Show version information.
 
@@ -42,8 +43,8 @@ rg \
   --color=always \
   `# --no-line-number` \
   `# --glob=!.git/*` \
-  `# --after-context=4` \
-  `# --before-context=4` \
+  --before-context="${ARGS['--context']}" \
+  --after-context="${ARGS['--context']}" \
   \
   "$pattern" \
   "$search_dir"
