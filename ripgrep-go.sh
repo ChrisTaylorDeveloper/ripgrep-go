@@ -42,7 +42,9 @@ rg \
   --smart-case \
   --color=always \
   `# --no-line-number` \
-  `# --glob=!.git/*` \
+  `# Include or exclude files and dirs that match the given glob.` \
+  --glob=!.git/* \
+  --glob=!vendor/* \
   --before-context="${ARGS['--context']}" \
   --after-context="${ARGS['--context']}" \
   \
