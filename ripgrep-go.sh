@@ -40,6 +40,8 @@ rg \
   --heading \
   `# Case insensitive if pattern all lowercase` \
   --smart-case \
+  `# Sort in ascending order, by file path` \
+  --sort=path \
   --color=always \
   `# --no-line-number` \
   `# Include or exclude files and dirs that match the given glob.` \
